@@ -1,10 +1,9 @@
 import random
 import numpy as np
-from torch import nn
-import torch
 from tqdm import tqdm
+
+import torch
 from torch import optim
-import torch.nn.functional as F
 
 from .Word2VecAbstract import Word2VecAbstractModel, Word2VecAbstract
 

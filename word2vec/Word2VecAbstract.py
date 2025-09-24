@@ -70,7 +70,11 @@ class Word2VecAbstractModel(nn.Module):
 
     
     @abstractmethod
-    def forward(self, *args, **kwargs):
+    def forward(
+        self, 
+        *args, 
+        **kwargs
+    ) -> None:
         """
         Forward raise error for the Word2Vec model.
         args:
@@ -153,7 +157,10 @@ class Word2VecAbstract:
         self.vocab_size = len(self.word_to_index)
 
     
-    def subsampling_probabilities(self, subsampling_threshold: float = 1e-3) -> None:
+    def subsampling_probabilities(
+        self, 
+        subsampling_threshold: float = 1e-3
+    ) -> None:
         """
         Probability to keep a word in training: 
         P_keep = max(0, 1 - sqrt(threshold / frequency))

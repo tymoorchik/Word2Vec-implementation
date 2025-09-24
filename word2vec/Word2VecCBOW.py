@@ -1,10 +1,9 @@
 import random
 import numpy as np
-from torch import nn
-import torch
 from tqdm import tqdm
+
+import torch
 from torch import optim
-import torch.nn.functional as F
 from torch.nn.utils.rnn import pad_sequence
 
 from .Word2VecAbstract import Word2VecAbstractModel, Word2VecAbstract
@@ -216,6 +215,3 @@ class Word2VecCBOW(Word2VecAbstract):
                 print(
                     f"Step {step}, Loss: {loss}, learning rate: {lr_scheduler._last_lr}"
                 )
-
-
-    
